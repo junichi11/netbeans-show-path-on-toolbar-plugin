@@ -1,4 +1,4 @@
-# NetBenas Show Path on Toolbar Pluign
+# NetBenas Show Path on Toolbar Plugin
 
 ## Features
 
