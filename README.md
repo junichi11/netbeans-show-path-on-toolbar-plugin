@@ -1,4 +1,4 @@
-# NetBenas Show Path on Toolbar Plugin
+# NetBeans Show Path on Toolbar Plugin
 
 ## Features
 
