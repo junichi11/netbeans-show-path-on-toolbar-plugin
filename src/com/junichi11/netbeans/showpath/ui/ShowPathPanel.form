@@ -22,6 +22,8 @@
               <Component id="fullPathTextField" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="copyButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="openButton" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -31,6 +33,7 @@
               <Component id="pathLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               <Component id="fullPathTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               <Component id="copyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Component id="openButton" alignment="3" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,6 +58,13 @@
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="com/junichi11/netbeans/showpath/ui/Bundle.properties" key="ShowPathPanel.copyButton.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="openButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/junichi11/netbeans/showpath/ui/Bundle.properties" key="ShowPathPanel.openButton.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
         </Property>
       </Properties>
     </Component>
