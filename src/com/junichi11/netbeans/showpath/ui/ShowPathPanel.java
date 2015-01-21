@@ -24,6 +24,7 @@
 package com.junichi11.netbeans.showpath.ui;
 
 import com.junichi11.netbeans.showpath.ui.actions.CopyPathAction;
+import com.junichi11.netbeans.showpath.ui.actions.OpenPathAction;
 import java.io.File;
 import java.util.Collection;
 import javax.swing.JPanel;
@@ -52,6 +53,7 @@ public class ShowPathPanel extends JPanel implements LookupListener {
     private ShowPathPanel() {
         initComponents();
         copyButton.addActionListener(new CopyPathAction());
+        openButton.addActionListener(new OpenPathAction());
         addLookupListener();
     }
 
@@ -73,9 +75,22 @@ public class ShowPathPanel extends JPanel implements LookupListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         pathLabel = new javax.swing.JLabel();
         fullPathTextField = new javax.swing.JTextField();
         copyButton = new javax.swing.JButton();
+        openButton = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         org.openide.awt.Mnemonics.setLocalizedText(pathLabel, org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.pathLabel.text")); // NOI18N
 
@@ -83,6 +98,8 @@ public class ShowPathPanel extends JPanel implements LookupListener {
         fullPathTextField.setText(org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.fullPathTextField.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(copyButton, org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.copyButton.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(openButton, org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.openButton.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,20 +110,25 @@ public class ShowPathPanel extends JPanel implements LookupListener {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fullPathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(copyButton))
+                .addComponent(copyButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(openButton))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(pathLabel)
                 .addComponent(fullPathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(copyButton))
+                .addComponent(copyButton)
+                .addComponent(openButton))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton copyButton;
     private javax.swing.JTextField fullPathTextField;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton openButton;
     private javax.swing.JLabel pathLabel;
     // End of variables declaration//GEN-END:variables
 
