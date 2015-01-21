@@ -75,22 +75,10 @@ public class ShowPathPanel extends JPanel implements LookupListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         pathLabel = new javax.swing.JLabel();
         fullPathTextField = new javax.swing.JTextField();
         copyButton = new javax.swing.JButton();
         openButton = new javax.swing.JButton();
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         org.openide.awt.Mnemonics.setLocalizedText(pathLabel, org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.pathLabel.text")); // NOI18N
 
@@ -127,7 +115,6 @@ public class ShowPathPanel extends JPanel implements LookupListener {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton copyButton;
     private javax.swing.JTextField fullPathTextField;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton openButton;
     private javax.swing.JLabel pathLabel;
     // End of variables declaration//GEN-END:variables
