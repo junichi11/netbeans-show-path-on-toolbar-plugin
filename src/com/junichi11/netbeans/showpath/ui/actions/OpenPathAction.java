@@ -29,15 +29,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.SwingUtilities;
+import org.openide.DialogDisplayer;
+import org.openide.NotifyDescriptor;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionRegistration;
 import org.openide.util.NbBundle.Messages;
 
 @ActionID(category = "Edit", id = "com.junichi11.netbeans.showpath.ui.actions.OpenPathAction")
 @ActionRegistration(displayName = "#CTL_OpenPathAction")
-@Messages("CTL_OpenPathAction=Open path with associated program")
+@Messages("CTL_OpenPathAction=Open path with the associated application")
 public final class OpenPathAction implements ActionListener {
 
+    private static final Logger LOGGER = Logger.getLogger(OpenPathAction.class.getName());
+
+    @Messages({
+        "OpenPathAction.message.notSupported=Sorry, this feature is not supported in your environment.",
+        "OpenPathAction.message.notAssociated=Probably, the file is not associated to the application."
+    })
     @Override
     public void actionPerformed(ActionEvent e) {
         // get full path
@@ -47,11 +58,34 @@ public final class OpenPathAction implements ActionListener {
             return;
         }
 
-        final Desktop desktop = java.awt.Desktop.getDesktop();
+        if (!Desktop.isDesktopSupported()) {
+            showErrorDialog(Bundle.OpenPathAction_message_notSupported());
+            return;
+        }
+
+        final Desktop desktop = Desktop.getDesktop();
+        if (!desktop.isSupported(Desktop.Action.OPEN)) {
+            showErrorDialog(Bundle.OpenPathAction_message_notSupported());
+            return;
+        }
+
         try {
             desktop.open(new File(fullPath));
         } catch (IOException ex) {
-            System.err.println(ex.getMessage());
+            LOGGER.log(Level.INFO, ex.getMessage());
+            showErrorDialog(Bundle.OpenPathAction_message_notAssociated());
         }
+    }
+
+    private void showErrorDialog(final String message) {
+        SwingUtilities.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                NotifyDescriptor.Message m = new NotifyDescriptor.Message(message, NotifyDescriptor.ERROR_MESSAGE);
+                DialogDisplayer.getDefault().notify(m);
+            }
+        });
+
     }
 }

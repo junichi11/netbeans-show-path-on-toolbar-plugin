@@ -88,6 +88,7 @@ public class ShowPathPanel extends JPanel implements LookupListener {
         org.openide.awt.Mnemonics.setLocalizedText(copyButton, org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.copyButton.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(openButton, org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.openButton.text")); // NOI18N
+        openButton.setToolTipText(org.openide.util.NbBundle.getMessage(ShowPathPanel.class, "ShowPathPanel.openButton.toolTipText")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

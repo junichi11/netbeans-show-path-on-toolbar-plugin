@@ -4,6 +4,7 @@
 
 - Show full path on Toolbar
 - Copy full path to clipboard
+- Open the file with the associated application
 
 ## FAQ
 
@@ -14,6 +15,10 @@ Please uncheck `View > Toolbar > Show Path`
 > I want to move this toolbar to other places.
 
 Please drag it.
+
+> Can't open the file
+
+Please try to check whether the file is associated to the proper application.
 
 ## LICENSE
 
